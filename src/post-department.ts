@@ -8,6 +8,8 @@ export interface IPostDepartment {
 }
 
 export default class PostDepartment implements IPostDepartment, ILogger {
-    public owner: IOrganization;
-    public packages: Array<IPackage>;
+    constructor(public owner: IOrganization, public packages: Array<IPackage>) {
+    }
+
+    logData: () => {};
 }
