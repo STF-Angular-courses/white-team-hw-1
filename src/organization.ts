@@ -7,7 +7,7 @@ export interface IOrganization {
     address: string;
     telephone: string;
     owner: string | IOrganisation | IPerson;
-    departments: IPostDepartment;  //IDepartment??
+    departments: IPostDepartment[];  //IDepartment??
 }
 
 export default class Organization implements IOrganization, ILogger {
@@ -18,7 +18,7 @@ export default class Organization implements IOrganization, ILogger {
         public address: string,
         public telephone: string,
         public owner: string | IOrganisation | IPerson,
-        public departments: IPostDepartment = []
+        public departments: IPostDepartment[] = []
     ) { }
     logData() {
         console.log(
